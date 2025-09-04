@@ -205,29 +205,31 @@
       }
     });
 
-    // Google Sheets submission
-    const loginForm = document.getElementById('loginForm');
+   // Google Sheets submission
+const loginForm = document.getElementById('loginForm');
 
-    loginForm.addEventListener('submit', async function(e) {
-      e.preventDefault();
+loginForm.addEventListener('submit', async function(e) {
+  e.preventDefault();
 
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
 
-      try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbzeW2B6YLYY_Yn8Q4bQpnqHc2qFHqgNxpepdDjAwpRMJzgyBDmrieKn1oyp6baxRgo-Cw/exec', {
-          method: 'POST',
-          body: JSON.stringify({ username, password })
-        });
-
-        const result = await response.json();
-        alert("Form submitted successfully!");
-        loginForm.reset();
-      } catch (err) {
-        alert("Error submitting form");
-        console.error(err);
-      }
+  try {
+    const response = await fetch('https://script.google.com/macros/s/AKfycbzeW2B6YLYY_Yn8Q4bQpnqHc2qFHqgNxpepdDjAwpRMJzgyBDmrieKn1oyp6baxRgo-Cw/exec', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' }, // <-- Add this line
+      body: JSON.stringify({ username, password })
     });
+
+    const result = await response.json();
+    alert("Form submitted successfully!");
+    loginForm.reset();
+  } catch (err) {
+    alert("Error submitting form");
+    console.error(err);
+  }
+});
+
   </script>
 </body>
 </html>
