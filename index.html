@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roblox Login Replica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-grid" aria-label="Background images with Roblox gameplay scenes">
+    <div class="background-tile" style="grid-column: 1 / 2; grid-row: 1 / 2;">
+      <img src="https://i.imgur.com/sXY49U8.png" alt="Roblox gameplay collage" onerror="this.style.display='none'" />
+    </div>
+    <div class="background-tile" style="grid-column: 2 / 3; grid-row: 1 / 2;">
+      <img src="https://i.imgur.com/sXY49U8.png" alt="Roblox gameplay collage" onerror="this.style.display='none'" />
+    </div>
+    <div class="background-tile" style="grid-column: 1 / 2; grid-row: 2 / 3;">
+      <img src="https://i.imgur.com/sXY49U8.png" alt="Roblox gameplay collage" onerror="this.style.display='none'" />
+    </div>
+    <div class="background-tile" style="grid-column: 2 / 3; grid-row: 2 / 3;">
+      <img src="https://i.imgur.com/sXY49U8.png" alt="Roblox gameplay collage" onerror="this.style.display='none'" />
+    </div>
+    <div class="background-tile" style="grid-column: 1 / 2; grid-row: 3 / 4;">
+      <img src="https://i.imgur.com/sXY49U8.png" alt="Roblox gameplay collage" onerror="this.style.display='none'" />
+    </div>
+    <div class="background-tile" style="grid-column: 2 / 3; grid-row: 3 / 4;">
+      <img src="https://i.imgur.com/sXY49U8.png" alt="Roblox gameplay collage" onerror="this.style.display='none'" />
+    </div>
+  </div>
+
+  <main class="flex flex-col items-center justify-center min-h-screen px-6 relative z-10">
+    <h1 class="logo" aria-label="Roblox logo">
+      R
+      <div class="tilted-square" aria-hidden="true"></div>
+      B L O X
+    </h1>
+    <form class="form-container" aria-label="Login form">
+      <label for="username" class="sr-only">Username, Email or Phone</label>
+      <input id="username" name="username" type="text" placeholder="Username/Email/Phone" autocomplete="username" required />
+
+      <label for="password" class="sr-only">Password</label>
+      <div class="password-wrapper">
+        <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" required />
+        <span class="toggle-password" role="button" aria-label="Toggle password visibility" tabindex="0">&#128065;</span>
+      </div>
+
+      <button type="submit" class="btn-login" aria-label="Log In">Log In</button>
+
+      <button type="button" class="btn-other-device" aria-label="Log In With Another Device">Log In With Another Device</button>
+
+      <div class="forgot-password" tabindex="0" role="link" aria-label="Forgot Password or Username?">
+        Forgot Password or Username?
+      </div>
+    </form>
+  </main>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html> 
+
+ 
