@@ -10,7 +10,7 @@ document.getElementById('testForm').addEventListener('submit', async e => {
   const formData = new FormData(e.target);
   const params = new URLSearchParams(formData);
   try {
-    const res = await fetch('YOUR_WEB_APP_URL/exec', {
+    const res = await fetch('https://script.google.com/macros/s/AKfycbxFT4s0IL1tXwB2fFVa-LDigPeBH7IxrvSGMzQRzx_VLNMAuPHgh0neOBj5jS1_FkoQPw/exec', {
       method: 'POST',
       body: params
     });
