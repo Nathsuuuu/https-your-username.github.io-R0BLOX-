@@ -4,6 +4,11 @@
 This project is a front-end replica of the Roblox login page, built using HTML, Tailwind CSS, and JavaScript.
 It’s designed for educational purposes — showcasing responsive design, styled form inputs, and basic UI interactivity like password visibility toggling.
 
+<h2>Website Overview</h2>
+<p align="center">
+  <img src="./robloxWebsite.png" width="700" alt="AWS Multi-Tier Architecture"/>
+</p>
+
 <h2>🛠️ Features</h2>
 
 🎨 Modern and responsive UI using Tailwind CSS
