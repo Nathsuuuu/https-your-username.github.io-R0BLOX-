@@ -6,7 +6,7 @@ It’s designed for educational purposes — showcasing responsive design, style
 
 <h2>Website Overview</h2>
 <p align="center">
-  <img src="./robloxWebsite.png" width="700" alt="AWS Multi-Tier Architecture"/>
+  <img src="./robloxWebsite.png" width="700" alt="RobloxWebsitePage"/>
 </p>
 
 <h2>🛠️ Features</h2>
